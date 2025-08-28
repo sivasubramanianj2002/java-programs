@@ -74,9 +74,16 @@ class UnionArrays{
 
    private static void addToList(ArrayList <Integer> arr, int value)
    {
-      if(arr.isEmpty() || arr.get(arr.size()-1) != value)
+      if(arr.isEmpty())
       {
          arr.add(value);
+      }
+
+      if(arr.get(arr.size()-1) != value)
+      {
+         arr.add(value);
+      }else{
+         arr2.add(value);
       }
    }
 }

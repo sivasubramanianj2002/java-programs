@@ -1,21 +1,33 @@
+import java.util.Scanner;
+
 class Panagram {
-    public boolean checkIfPangram(String sentence) {
-        char [] words = sentence.toCharArray();
+    public static void main(String [] args)
+    {
+        System.out.println("enter any value");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        Panagram pg  = new Panagram();
+        System.out.println(pg.isPanagram(s));
+
+    }
+
+    public  boolean isPanagram(String s)
+    {
         int [] arr = new int [26];
-             for (char word : words) {
-            if (word >= 'a' && word <= 'z') {
-                arr[word - 'a']++;
-            }
+        char [] words = s.toCharArray();
+        for(char word:words)
+        {
+            arr[word - 'a']++;
         }
 
-        for(int i =0; i<arr.length;i++)
+        for(int arrs:arr)
         {
-            if(arr[i]<1)
+            if(arrs<1)
             {
                 return false;
             }
         }
+
         return true;
     }
 }
-

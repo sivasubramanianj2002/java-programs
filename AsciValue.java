@@ -2,7 +2,7 @@ public class AsciValue {
     
     public static void main(String [] args)
     {
-      toArr();
+     System.out.print(toArr());
     }
 
     private static void  lowerCaseAsci()
@@ -27,9 +27,9 @@ public class AsciValue {
         return asci;
     }
 
-    private static void toArr()
+    private static char [] toArr()
     {
-        char [] Character = new char[52];
+        char [] Character = new char[26];
         int index =0;
         for(char c = 'a'; c <= 'z' ; c++)
         {
@@ -40,5 +40,7 @@ public class AsciValue {
         {
             System.out.println("Asci value of " + c+ " is" + (int)(c));
         }
+
+        return Character;
     }
 }
